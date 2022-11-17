@@ -1,5 +1,5 @@
-import logo from '../../assets/img/logo.svg'
-import './styless.css'
+import logo from '../../assets/img/logo.svg';
+import './styless.css';
 
 function Header() {
     return (
@@ -9,12 +9,12 @@ function Header() {
             <h1>DSMeta</h1>
             <p>
               Desenvolvido por
-              <a href="https://www.instagram.com/devsuperior.ig">@devsuperior.ig</a>
+              <a href="google.pt">@devrabaioli</a>
             </p>
         </div>
     </header>
     )
   }
   
-  export default Header
+  export default Header;
   

@@ -1,6 +1,6 @@
 
-import NotificationButton from '../NotificationButton'
-import './styless.css'
+import NotificationButton from '../NotificationButton';
+import './styless.css';
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import { useState } from 'react';
@@ -98,4 +98,4 @@ function SalesCard() {
   )
 }
 
-export default SalesCard
+export default SalesCard;
