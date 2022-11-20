@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import dev.rabaioli.desmeta.entities.Sale;
 import dev.rabaioli.desmeta.services.SaleService;
+import dev.rabaioli.desmeta.services.SmsService;
 
 @RestController
 @RequestMapping(value = "/sales")
@@ -21,12 +22,20 @@ public class SaleController {
 	@Autowired
 	private SaleService service;
 	
+	@Autowired
+	private SmsService smsService;
+	
 	@RequestMapping(method = RequestMethod.GET)
 	public Page<Sale> findSales(
 			@RequestParam(value = "minDate", defaultValue = "" ) String minDate, 
 			@RequestParam(value = "maxDate", defaultValue = "") String maxDate, 
 			Pageable page){
 		return service.findSales(minDate, maxDate, page);
+	}
+	
+	@GetMapping("/notification")
+	public void notifySms() {
+		smsService.sendSms();
 	}
 
 }
